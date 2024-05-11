@@ -30,7 +30,8 @@ SECRET_KEY = 'django-insecure-yv+7!!ko(19d=$g)il+o(2h4vh1edhprb@#6oruvkgf!vz3s_!
 DEBUG = True
 
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['rkh-election.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ["https://rkh-election.up.railway.app"]
 
 
 # Application definition
@@ -87,11 +88,23 @@ WSGI_APPLICATION = 'rkh.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('PGDATABASE'),
+        'USER':os.environ.get('PGUSER'),
+        'PASSWORD':os.environ.get('PGPASSWORD'),
+        'HOST':os.environ.get('PGHOST'),
+        'PORT':os.environ.get('PGPORT')
+
+}
 }
 
 # database_url = os.environ.get('DATABASE_URL')
