@@ -1,0 +1,9 @@
+uploads/
+*sqlite3
+__pycache__
+media/
+uploads/
+migrations/
+README.md
+todo.md
+dump.txt

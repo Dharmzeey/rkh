@@ -1,0 +1,149 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Admin Result Pane</h1>
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Hall Chairman</h1>
+      {% for vote in hall_chair_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Vice Hall Chairman</h1>
+      {% for vote in vice_hall_chair_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>General Secretary</h1>
+      {% for vote in gen_sec_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Information Minister</h1>
+      {% for vote in info_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Internal Affairs and Defense Minister </h1>
+      {% for vote in defense_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Health Minister </h1>
+      {% for vote in health_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Sport Minister </h1>
+      {% for vote in sport_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.vote_count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+<div>
+  <div class="vote-result-container">
+    <div>
+      <h1>Student Representative Council </h1>
+      {% for vote in src_votes %}
+      <div>
+        <b>{{ vote.display_name|title }}</b>
+        has
+        <b>{{ vote.studentrepresentativecouncilvote_set.count }}</b>
+        votes
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <br>
+  <hr>
+</div>
+
+{% endblock %}

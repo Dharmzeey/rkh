@@ -1,0 +1,58 @@
+.form-login{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  margin: auto;
+}
+
+fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
+  width: min(100%, 600px);
+
+  /*stacking fieldsets above each other*/
+  position: relative;
+  margin: 10dvw auto 0 auto;
+}
+
+fieldset:not(:first-of-type) {
+  display: none;
+}
+
+input[type="radio"], input[type="checkboc"]{
+  transform: scale(1.3);
+}
+
+.action-button {
+  width: 100px;
+  background: #360e22;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.action-button-previous {
+  width: 100px;
+  background: #7d7dac;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}

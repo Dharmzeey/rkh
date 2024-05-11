@@ -1,0 +1,171 @@
+{% extends 'base/base.html' %}
+{% load profile_template_tags %}
+
+{% block content %}
+
+
+<div class="form-container">
+  <form id="vote-form" action="" method="post">
+    {% csrf_token %}
+    <fieldset class="post scale-fieldset" id="hall_chair">
+      <h3 class="post-title">Hall Chairman</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in hall_chair_form.hall_chairman %}
+        <div>
+          <img class="aspirant_image" src="{{ hall_chair_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ hall_chair_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ hall_chair_aspirants|display_name:forloop.counter0 }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class="post" id="vice_hall_chair">
+      <h3 class="post-title">Vice Hall Chairman</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in vice_hall_chair_form.vice_hall_chairman %}
+        <div>
+          <img class="aspirant_image" src="{{ vice_hall_chair_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ vice_hall_chair_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ vice_hall_chair_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+
+    <fieldset class="post" id="gen-sec">
+      <h3 class="post-title">General Secretary</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in gen_sec_form.general_secretary %}
+        <div>
+          <img class="aspirant_image" src="{{ gen_sec_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ gen_sec_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ gen_sec_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+
+    <fieldset class="post" id="info-minister">
+      <h3 class="post-title">Information Minister</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in info_form.information_minister %}
+        <div>
+          <img class="aspirant_image" src="{{ info_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ info_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ info_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class="post" id="defense-minister">
+      <h3 class="post-title">Internal Affairs and Defense Minister</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in defense_form.internal_affairs_and_defense_minister %}
+        <div>
+          <img class="aspirant_image" src="{{ defense_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ defense_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ defense_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class="post" id="health-minister">
+      <h3 class="post-title">Health Minister</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in health_form.health_minister %}
+        <div>
+          <img class="aspirant_image" src="{{ health_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ health_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ health_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class="post" id="sport-minister">
+      <h3 class="post-title">Sport Minister</h3>
+      <div class="flash">Select one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in sport_form.sport_minister %}
+        <div>
+          <img class="aspirant_image" src="{{ sport_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ sport_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ sport_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+
+    <fieldset class="post" id="src">
+      <h3 class="post-title">Student Representative Council</h3>
+      <div class="flash">You can select more than one candidate</div>
+      <br>
+      <div class="post-container">
+        {% for person in src_form.student_representative_council %}
+        <div>
+          <img class="aspirant_image" src="{{ src_aspirants|display_image:forloop.counter0 }}"
+            alt="{{ src_aspirants|display_name:forloop.counter0 }}">
+          <div><b>{{ person }}</b></div>
+          <div>{{ src_aspirants|display_name:forloop.counter0 }}</div>
+
+        </div>
+
+        {% endfor %}
+      </div>
+      <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+      <input class="button action-button" type="submit" name="submit" value="Submit" id="submit">
+    </fieldset>
+  </form>
+
+</div>
+{% endblock %}

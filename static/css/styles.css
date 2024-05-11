@@ -1,0 +1,123 @@
+*{
+  text-align: center;
+  font-size: 1.1rem;
+  list-style-type: none;
+}
+
+.main{
+  width: 90%;
+  margin: auto;
+}
+
+div[class$="container"]:not([class='form-container']):not([class='post-container']) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 0 none;
+  border-radius: 0px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  padding: 2rem;
+  width: min(95%, 600px);
+  margin: 10dvw auto 0 auto;
+
+  /* transform: translateY(30%); */
+}
+
+table{
+  width: 100%;
+}
+
+tr{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kuti-logo {
+  padding: 1rem;
+}
+
+.form-login {
+  width: 90%;
+  margin: auto;
+  line-height: 2rem;
+}
+
+.form-login input:not([type=submit]){
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #360e22;
+}
+
+.form-login input[type=submit] {
+  width: 50%;
+  background: #360e22;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.hall-name {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.post-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.aspirant_image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100rem;
+  border: 3px solid grey;
+}
+
+.flash {
+  color: Red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.vote-success {
+  width: 10rem;
+}
+
+.back-home {
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+div .vote-result-container:not(.vote-result-container:first-child){
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 5vw;
+  padding-bottom: 3rem;
+}
+
+footer a, .back-home a {
+  text-decoration: none;
+  font-weight: bold;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="shortcut icon" href="{% static 'icons/icon.ico' %}" type="image/x-icon">
+  <title>Ransome Kuti Hall Election</title>
+
+</head>
+
+<body>
+  <div class="login-container">
+    <div>
+      <a href="{% url 'home:home' %}">
+        <img class="kuti-logo" src="{% static 'images/kuti logo.png' %}" alt="kuti hall logo">
+      </a>
+      <h3 class="hall-name">RANSOME KUTI HALL ELECTION LOGIN PAGE</h3>
+
+      <h2>Login with the email and password sent to your student inbox</h2>
+
+      <form action="" method="POST" class="form-login">
+        {% csrf_token %}
+        <table>
+          {{ form.as_table}}
+        </table>
+        {% if error %}
+        <p class="flash">{{ error }}</p>
+        {% endif %}
+        <input type="submit" value="Login">
+      </form>
+    </div>
+
+  </div>
+  <footer>
+    Created by <a href="https://dharmzeey.netlify.app" target="_blank">Dharmzeey</a>
+  </footer>
+</body>
+
+</html>

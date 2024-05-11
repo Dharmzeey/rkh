@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="home-container">
+  <div>
+    <a href="{% url 'home:home' %}">
+      <img class="vote-success" src="{% static 'icons/tick.png' %}" alt="Success">
+    </a>
+    <p>Thanks for taking part in the Ransome Kuti Hall Election 😊. 
+      <br>
+      Sit tight for the election result by 6:08pm
+    </p>
+    
+    <form method="post" action="{% url 'home:logout' %}">
+      {% csrf_token %}
+      <button type="submit">logout</button>
+    </form>
+    <div class="back-home"><a href="{% url 'home:home' %}">Home</a></div>
+  </div>
+
+</div>
+
+{% endblock %}
+
