@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-yv+7!!ko(19d=$g)il+o(2h4vh1edhprb@#6oruvkgf!vz3s_!
 DEBUG = True
 
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
-ALLOWED_HOSTS = ['rkh-election.up.railway.app']
+ALLOWED_HOSTS = ['rkh-election.up.railway.app', 'localhost']
 CSRF_TRUSTED_ORIGINS = ["https://rkh-election.up.railway.app"]
 
 
@@ -92,20 +92,20 @@ WSGI_APPLICATION = 'rkh.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('PGDATABASE'),
-        'USER':os.environ.get('PGUSER'),
-        'PASSWORD':os.environ.get('PGPASSWORD'),
-        'HOST':os.environ.get('PGHOST'),
-        'PORT':os.environ.get('PGPORT')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('PGDATABASE'),
+#         'USER':os.environ.get('PGUSER'),
+#         'PASSWORD':os.environ.get('PGPASSWORD'),
+#         'HOST':os.environ.get('PGHOST'),
+#         'PORT':os.environ.get('PGPORT')
 
-}
-}
+# }
+# }
 
 database_url = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.parse(database_url)
+# DATABASES['default'] = dj_database_url.parse(database_url)
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
