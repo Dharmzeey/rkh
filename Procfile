@@ -1,2 +1,1 @@
-release:  python manage.py migrate 
-web: gunicorn rkh.wsgi:application
+web: python manage.py migrate && gunicorn rkh.wsgi:application
